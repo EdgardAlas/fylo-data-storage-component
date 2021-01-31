@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+body {
+  background-color: #0c122c;
+  background-image: url("../../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
