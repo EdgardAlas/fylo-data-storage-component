@@ -1,0 +1,121 @@
+.storage-capacity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+
+    &__used {
+        margin-top: 0.5rem;
+        position: relative;
+        width: 100%;
+        background: $very-dark-blue;
+        border-radius: 10px;
+        border: 2px solid $very-dark-blue;
+        cursor: pointer;
+
+        &:hover .storage-capacity__tooltip {
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+
+    &__bar {
+        height: 1.2rem;
+        background: $gradient;
+        border-radius: 10px;
+        width: 81.5%;
+        position: relative;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0.1rem;
+            height: 1rem;
+            width: 1rem;
+            background-color: $pale-blue;
+            border-radius: 10px;
+            right: 0.1rem;
+        }
+    }
+
+    &__capacity {
+        position: absolute;
+
+        margin-top: 0.3rem;
+
+        &--min {
+            left: 0;
+        }
+
+        &--max {
+            right: 0;
+        }
+    }
+
+    &__tooltip {
+        position: absolute;
+        background: $pale-blue;
+        border-radius: $borer-radius;
+        border: 2px solid $very-dark-blue;
+        color: $very-dark-blue;
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: center;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10%);
+        margin-top: 1.3rem;
+        font-size: 0.8rem;
+        padding: 1rem;
+        display: flex;
+        align-items: flex-start;
+        cursor: context-menu;
+
+        &-description {
+            box-sizing: initial;
+            margin: 0;
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 700;
+
+            &--small {
+                font-size: 0.9rem;
+                font-weight: 400;
+                transform: translateY(50%);
+            }
+        }
+
+        @media #{$breakpoint} {
+            top: 0;
+            right: 0;
+            transform: translateX(70%) translateY(-180%);
+            width: 40%;
+            opacity: 0;
+            transition: opacity 0.3s cubic-bezier(.17, .84, .66, .77);
+            border-radius: $borer-radius;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 2rem;
+                height: 2rem;
+                background: inherit;
+                transform: translateX(-45%) translateY(55%) rotate(45deg);
+                left: 50%;
+                bottom: 0;
+                border-bottom: inherit;
+                border-right: inherit;
+            }
+
+        }
+
+
+    }
+
+    @media #{$breakpoint} {
+        min-width: ($card-size*1.3);
+        max-width: ($card-size*1.3);
+    }
+
+}

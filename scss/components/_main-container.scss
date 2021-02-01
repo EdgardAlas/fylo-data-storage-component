@@ -1,0 +1,9 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$breakpoint} {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}

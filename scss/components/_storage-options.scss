@@ -1,0 +1,28 @@
+.storage-options {
+    border-top-right-radius: 100px;
+
+    &__option-list {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        padding: 1rem 0 0 0;
+        margin: 0;
+
+    }
+
+    &__option {
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1.5rem;
+        background: $very-dark-blue;
+        border-radius: $borer-radius / 2;
+
+        &-img {
+            height: 1.5rem;
+        }
+
+    }
+}

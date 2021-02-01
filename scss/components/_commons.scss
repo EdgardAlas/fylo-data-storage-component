@@ -1,0 +1,22 @@
+.strong {
+    font-weight: 700;
+
+}
+
+
+.separator {
+    height: 1rem;
+
+    @media #{$breakpoint} {
+        width: 1rem;
+    }
+}
+
+.storage-capacity,
+.storage-options {
+    background-color: $dark-blue;
+    padding: 2rem;
+    max-width: $card-size;
+    min-width: $card-size;
+    border-radius: $borer-radius;
+}
